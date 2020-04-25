@@ -3,4 +3,25 @@
   flex-wrap: wrap;
   height: 300px;
   width: 400px;
+  margin: 20px;
+}
+
+.body-title {
+  align-content: center;
+}
+
+.body-title h2 {
+  color: blue;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-container button {
+  background-color: green;
+  color: yellow;
+  border-radius: 9px 9px 9px 9px;
+  font-weight: bold;
 }

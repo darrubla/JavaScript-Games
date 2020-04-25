@@ -1,42 +1,57 @@
+//card option
+const cardArray = [
+  {
+    name: "cheeseburger",
+    img: "images/cheeseburger.png",
+  },
+  {
+    name: "fries",
+    img: "images/fries.png",
+  },
+  {
+    name: "hotdgog",
+    img: "images/hotdog.png",
+  },
+  {
+    name: "ice-cream",
+    img: "images/ice-cream.png",
+  },
+  {
+    name: "milkshake",
+    img: "images/milkshake.png",
+  },
+  {
+    name: "pizza",
+    img: "images/pizza.png",
+  },
+  {
+    name: "cheeseburger",
+    img: "images/cheeseburger.png",
+  },
+  {
+    name: "fries",
+    img: "images/fries.png",
+  },
+  {
+    name: "hotdgog",
+    img: "images/hotdog.png",
+  },
+  {
+    name: "ice-cream",
+    img: "images/ice-cream.png",
+  },
+  {
+    name: "milkshake",
+    img: "images/milkshake.png",
+  },
+  {
+    name: "pizza",
+    img: "images/pizza.png",
+  },
+];
+
 document.addEventListener("DOMContentLoaded", () => {
-  //card option
-  const cardArray = [
-    {
-      name: "blank",
-      img: "images/blank.png",
-    },
-    {
-      name: "cheeseburger",
-      img: "images/chesseburger.png",
-    },
-    {
-      name: "fries",
-      img: "images/fries.png",
-    },
-    {
-      name: "hotdgog",
-      img: "images/hotdog.png",
-    },
-    {
-      name: "ice-cream",
-      img: "images/ice-cream.png",
-    },
-    {
-      name: "milkshake",
-      img: "images/milkshake.png",
-    },
-    {
-      name: "pizza",
-      img: "images/pizza.png",
-    },
-    {
-      name: "white",
-      img: "images/white.png",
-    },
-  ];
-
-  cardArray.sort(() => 0.5 - Math.random());
-
+  sortcards(cardArray);
   const grid = document.querySelector(".grid");
   const resultDisplay = document.querySelector("#result");
   var cardsChosen = [];
@@ -47,12 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
       var card = document.createElement("img");
-      card.setAttribute("src", "images/blank.png");
+      card.setAttribute("src", "images/blank-bihus.png");
       card.setAttribute("data-id", i);
-      // card.addEventListener('click', flipcard)
+      card.addEventListener("click", flipcard);
       grid.appendChild(card);
     }
   }
+
+  // sort cards
+  function sortcards(Arr) {
+    Arr.sort(() => 0.5 - Math.random());
+  }
+
   // check for matches
   function checkForMatch() {
     var cards = document.querySelectorAll("img");
@@ -65,8 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cardsWon.push(cardsChosen);
     } else {
       alert("Sorry, try again");
-      cards[optionOneId].setAttribute("src", "images/blank.png");
-      cards[optionTwoId].setAttribute("src", "images/blank.png");
+      cards[optionOneId].setAttribute("src", "images/blank-bihus.png");
+      cards[optionTwoId].setAttribute("src", "images/blank-bihus.png");
     }
     cardsChosen = [];
     cardsChosenId = [];
@@ -89,3 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   createBoard();
 });
+
+//------------------Revisar--------------------
+//document.getElementById("sort").onclick = createBoard();
