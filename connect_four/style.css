@@ -1,0 +1,42 @@
+.grid {
+  border: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  height: 120px;
+  width: 140px;
+}
+
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.body-title {
+  align-content: center;
+}
+
+.body-title h2 {
+  color: blue;
+}
+
+.player-one {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.player-two {
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-container button {
+  background-color: green;
+  color: yellow;
+  border-radius: 9px 9px 9px 9px;
+  font-weight: bold;
+}
